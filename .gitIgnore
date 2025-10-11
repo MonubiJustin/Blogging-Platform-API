@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo 
+*.pyd 
+*.py.class
+
+# Virtual environment
+.venv/
+env/
+ENV/
+.python-version
+
+# Django stuff
+staticfiles/
+db.sqlite3
+media/
+*.log
+*.pot 
+*.pyc 
+
+# MYSQL credentials (if any local cnfig files)
+*.cnf
+
+
+# IDE / editor settings
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Environment variables
+.env
