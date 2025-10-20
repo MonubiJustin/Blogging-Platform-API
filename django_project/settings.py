@@ -47,6 +47,8 @@ INSTALLED_APPS = [
     "allauth.socialaccount",
     "dj_rest_auth",
     "dj_rest_auth.registration",
+    "drf_spectacular",
+    
     # local
     "accounts",
     "blog_api",
@@ -57,10 +59,17 @@ REST_FRAMEWORK = {
     "DEFAULT_PERMISSION_CLASSES": [
         "rest_framework.permissions.IsAuthenticated",
     ],
+    "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
     # "DEFAULT_AUTHENTICATION_CLASSES": [
     #     "rest_framework.authentication.SessionAuthentication",
     #     "rest_framework.authentication.BasicAuthentication",
     # ]
+}
+
+SPECTACULAR_SETTINGS = {
+    "TITLE": "BLOGGING PLATFORM API",
+    "DESCRIPTION": "A fully customized blogging API built with DRF.",
+    "VERSION": "1.0.0"
 }
 
 AUTH_USER_MODEL = "accounts.CustomUser"
